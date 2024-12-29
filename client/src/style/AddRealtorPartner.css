@@ -1,0 +1,75 @@
+.add-realtor-container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background: linear-gradient(135deg, #24243e, #302f4d);
+    border-radius: 10px;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.5);
+    color: #fff;
+  }
+  
+  .add-realtor-container h1 {
+    text-align: center;
+    color: #ffcc00;
+    margin-bottom: 20px;
+  }
+  
+  .message {
+    text-align: center;
+    font-size: 1rem;
+    margin-bottom: 20px;
+    color: #ff5733;
+  }
+  
+  .add-realtor-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .form-group {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .form-group label {
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  .form-group input,
+  .form-group textarea {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background: #f1f1f1;
+    font-size: 1rem;
+    outline: none;
+  }
+  
+  .form-group input:focus,
+  .form-group textarea:focus {
+    border: 2px solid #ffcc00;
+  }
+  
+  textarea {
+    resize: none;
+    height: 100px;
+  }
+  
+  .submit-button {
+    background: linear-gradient(90deg, #ff6a00, #ffcc00);
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s, background-color 0.3s;
+  }
+  
+  .submit-button:hover {
+    transform: scale(1.05);
+    background: linear-gradient(90deg, #ff5733, #ffcc00);
+  }
+  

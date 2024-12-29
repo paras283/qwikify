@@ -1,0 +1,87 @@
+/* Fitness Wellness Page Styles */
+.fitness-container {
+    padding: 50px 20px; /* Added top margin of 50px */
+    text-align: center;
+    margin-top: 50px; /* Ensure the content doesn't get pushed up too much */
+  }
+  
+  h1 {
+    font-size: 32px;
+    margin-bottom: 40px;
+    color: #333;
+  }
+  
+  /* Category Section */
+  .categories {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 30px; /* Added gap between the categories */
+    margin: 0 auto;
+    max-width: 1100px; /* Ensures the categories don't stretch too wide */
+  }
+  
+  .category {
+    width: 45%; /* Sets width for the categories */
+    margin-bottom: 30px;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .category h2 {
+    font-size: 24px;
+    color: #28a745;
+    margin-bottom: 20px;
+  }
+  
+  .item-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .item-card {
+    background-color: #ffffff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .item-card h3 {
+    font-size: 20px;
+    color: #333;
+  }
+  
+  .item-card p {
+    font-size: 14px;
+    color: #777;
+  }
+  
+  .item-card p:nth-child(2) {
+    font-weight: bold;
+  }
+  
+  .item-card p:last-child {
+    color: #28a745;
+  }
+  
+  /* Responsive Design */
+  @media screen and (max-width: 768px) {
+    .categories {
+      flex-direction: column;
+      align-items: center; /* Center the categories */
+      width: 100%; /* Allow the categories to span the full width */
+    }
+  
+    .category {
+      width: 80%; /* Set the category width to 80% on mobile for a more compact look */
+      margin-bottom: 20px; /* Adjust the margin between sections */
+    }
+  
+    .fitness-container {
+      margin-top: 50px; /* Ensures there is enough space at the top */
+    }
+  }
+  

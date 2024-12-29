@@ -1,0 +1,118 @@
+/* Container Styling */
+.medicine-container {
+    max-width: 600px;
+    margin: 90px auto 0 auto;
+    padding: 20px;
+    text-align: center;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+}
+
+/* Form Styling */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.file-input,
+.mobile-input {
+    margin-top: 10px;
+    padding: 10px;
+    width: 100%;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+/* Tiles */
+.medicine-tiles {
+    display: flex;
+    justify-content: space-around;
+    margin: 30px 0;
+}
+
+.medicine-tile {
+    flex: 1;
+    padding: 15px;
+    margin: 0 10px;
+    text-align: center;
+    background-color: #e0e0e0;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    position: relative; /* Required for absolute positioning of the ribbon */
+}
+
+.medicine-tile.active {
+    background-color: #4caf50;
+    color: white;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Selection Message Styling */
+.selection-message {
+    margin: 20px 0;
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Horizontal Ruler */
+hr {
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 20px 0;
+}
+
+/* Success Message Styling */
+.success-message {
+    margin: 15px 0;
+    color: #4caf50;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: #e8f5e9;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #c8e6c9;
+}
+
+/* Error Styling */
+.error {
+    margin: 10px 0;
+    color: #f44336;
+    font-weight: bold;
+}
+
+/* Submit Button */
+.submit-button {
+    background-color: #4caf50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.submit-button:hover {
+    background-color: #45a049;
+}
+
+/* Discount Ribbon Positioned Above the Headline */
+.discount-ribbon {
+    position: absolute;
+    top: -10px; /* Adjusted to bring it slightly above the tile */
+    right:  40px;
+    width: 50%; /* Makes the ribbon span the entire width of the tile */
+    background-color: #ff5252; /* Ribbon background color */
+    color: white;
+    font-size: 10px; /* Adjusted for readability */
+    font-weight: bold;
+    text-align: center; /* Centers the text */
+    padding: 5px 0; /* Vertical padding for the ribbon */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Shadow for the ribbon */
+    z-index: 10; /* Ensures it sits above the tile content */
+    border-radius: 8px;
+}

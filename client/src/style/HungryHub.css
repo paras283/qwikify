@@ -1,0 +1,440 @@
+.menu-page {
+  padding: 20px;
+  margin-top: 70px;
+}
+
+.main-heading {
+  font-size: 2.4rem; /* Larger font for emphasis */
+  color: #2a2a2a; /* Darker text color */
+  margin-bottom: 10px;
+  font-weight: 700; /* Make the text bold */
+  letter-spacing: 2px;
+  text-align: center;
+}
+
+.sub-heading {
+  font-size: 18px;
+  text-align: center;
+  color: #777;
+  margin-bottom: 20px;
+  font-style: italic
+}
+
+.category-section {
+  margin-bottom: 20px;
+  margin-top: 10px;
+  background-color: #fff;  /* White background for the tile */
+  border-radius: 10px;     /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  padding: 20px;           /* Add padding inside the tile */
+}
+
+.category-heading {
+  font-size: 24px;
+  text-align: center;
+  color: #333;
+  cursor: pointer;
+  margin-bottom: 10px;
+  transition: color 0.3s;
+}
+
+.category-heading:hover {
+  color: #E8A941;
+}
+
+.menu-items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2px;
+}
+
+.menu-item {
+  background-color: #f4f4f4;
+  padding: 6px;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 600px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;  /* Add some space between items */
+}
+
+.menu-item h3 {
+  font-size: 15px !important;
+  margin: 0;
+  flex: 1;
+}
+
+.menu-item p {
+  margin: 0;
+  font-size: 16px;
+  color: #666;
+  flex: 1;
+}
+
+.menu-item .item-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.menu-item .item-details p {
+  margin: 0;
+  font-size: 16px;
+  color: #666;
+}
+
+.menu-item button {
+  padding: 5px 10px;
+  background-color: #E8A941;  /* Green background for add button */
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.menu-item button:hover {
+  background-color: #E9B23F;
+}
+
+.order-summary {
+  margin-top: 30px;
+  padding: 20px;
+  background-color: #fff;  /* White background for the tile */
+  border-radius: 10px;     /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  width: 100%;             /* Ensures responsiveness */
+  max-width: 400px;        /* Restrict maximum width for better layout */
+  box-sizing: border-box;  /* Ensures padding doesn't affect width */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.order-summary-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  background-color: #f4f4f4;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  background-color: #fff;  /* White background for header */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Slight shadow for header */
+}
+
+.order-summary ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.order-item {
+  display: flex;
+  justify-content: flex-start; /* Align to the left */
+  align-items: center;
+  padding: 5px 0;
+  border-bottom: 1px solid #ddd;
+  font-size: 14px; /* Reduced font size for mobile */
+}
+
+.order-item p {
+  margin: 0;
+  font-size: 14px; /* Reduced font size for mobile */
+  text-align: left; /* Ensure text stays left aligned */
+  flex: 1;
+}
+
+.order-item-actions {
+  display: flex;
+  align-items: center;
+  margin-left: 10px; /* Space between item details and actions */
+  justify-content: flex-start; /* Align buttons to the left */
+}
+
+.order-item-actions button {
+  padding: 5px 10px;
+  margin: 0 10px;
+  border-radius: 5px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.order-item-actions button.action-btn {
+  margin-bottom: 10px;
+  padding: 3px 8px;  /* Smaller padding for smaller buttons */
+  font-size: 12px;    /* Smaller font size */
+  background-color: #E8A941;  /* Green background for + and - */
+  color: white;
+  border: none;
+}
+
+.order-item-actions button.action-btn:hover {
+  background-color: #E9B23F;  /* Darker green on hover */
+}
+
+/* Mobile-specific adjustments */
+@media (max-width: 768px) {
+  .order-summary {
+    width: 90%; /* Take up more space on smaller screens */
+    padding: 15px; /* Less padding on mobile */
+  }
+
+  .order-item {
+    font-size: 12px; /* Smaller font size on mobile */
+    flex-direction: row; /* Keep items aligned horizontally */
+    text-align: left; /* Keep text aligned to the left */
+  }
+
+  .order-item-actions {
+    justify-content: flex-start; /* Keep buttons aligned to the left */
+    margin-left: 10px; /* Space between item details and actions */
+  }
+
+  .order-item-actions button {
+    font-size: 12px; /* Smaller button font size */
+    padding: 5px 8px; /* Smaller padding for mobile */
+  }
+
+  .order-summary input {
+    padding: 8px;  /* Adjust padding for mobile */
+    font-size: 14px;  /* Slightly smaller font size */
+    width: 100%; /* Make input take full width on mobile */
+  }
+
+  .order-summary button {
+    font-size: 16px; /* Larger button font size for mobile */
+    padding: 10px 15px;
+    width: 100%; /* Full width button on mobile */
+  }
+
+  /* Error message styling */
+  .order-summary p {
+    font-size: 14px; /* Adjust font size of total and other text for mobile */
+  }
+}
+
+@media (max-width: 480px) {
+  .order-summary {
+    width: 100%; /* Full width for very small screens */
+    padding: 10px; /* Even less padding on very small screens */
+  }
+
+  .order-item-actions {
+    flex-direction: row; /* Ensure buttons stay in a row */
+    justify-content: flex-start; /* Keep actions left-aligned */
+  }
+
+  .order-item-actions button {
+    font-size: 12px; /* Even smaller font size for very small screens */
+    padding: 5px 10px;
+  }
+
+  .order-item {
+    font-size: 12px; /* Make the text even smaller on very small screens */
+  }
+
+  .order-summary input {
+    font-size: 12px; /* Smaller font size on very small screens */
+  }
+
+  .order-summary button {
+    font-size: 16px; /* Adjust font size for mobile */
+  }
+}
+
+/* Styles for the payment button */
+.order-summary button {
+  padding: 10px 20px;
+  margin-top: 10px;
+  font-size: 18px;
+  width: 100%;
+  background-color: #28a745; /* Green background for payment button */
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px; /* Rounded corners */
+}
+
+.order-summary button:hover {
+  background-color: #218838; /* Darker green on hover */
+}
+
+/* Styles for the delete bucket icon */
+.order-summary img.delete-icon {
+  width: 40px;  /* Adjust the size of the icon */
+  height: 40px;
+  cursor: pointer;
+  margin-bottom: 15px; /* Space between icon and order items */
+  transition: transform 0.3s ease; /* Smooth scale transition */
+}
+
+/* Hover effect for the delete icon */
+.order-summary img.delete-icon:hover {
+  transform: scale(1.1);  /* Slightly enlarge on hover */
+}
+
+/* Active state for the delete icon */
+.order-summary img.delete-icon:active {
+  transform: scale(1);  /* Reset scale when clicked */
+}
+
+/* Mobile-specific adjustments for delete icon */
+@media (max-width: 768px) {
+  .order-summary img.delete-icon {
+    width: 25px;
+    height: 25px;
+  }
+}
+
+@media (max-width: 480px) {
+  .order-summary img.delete-icon {
+    width: 25px;
+    height: 25px;
+  }
+}
+
+
+/* Styles for the order-summary-header */
+.order-summary-header {
+  display: flex;            /* Use flexbox for alignment */
+  justify-content: space-between;  /* Space between the text and icon */
+  align-items: center;      /* Vertically center the text and icon */
+  padding: 10px 0px;       /* Padding for the header */
+  background-color: #f4f4f4;  /* Light background color */
+  border-radius: 10px;      /* Rounded corners */
+  margin-bottom: 15px;      /* Space below the header */
+}
+
+.order-summary-header h2 {
+  margin: 12px;               /* Remove default margin */
+  font-size: 18px;          /* Font size for the header text */
+  color: #333;              /* Text color */
+}
+
+.order-summary-header .icon {
+  width: 15px;              /* Set the icon width */
+  height: 15px;             /* Set the icon height */
+  cursor: pointer;         /* Pointer cursor on hover */
+  transition: transform 0.3s ease; /* Smooth scale transition */
+}
+
+/* Hover effect for icon */
+.order-summary-header .icon:hover {
+  transform: scale(1.1);    /* Slightly enlarge icon on hover */
+}
+
+
+.confirmation-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+
+.modal-content {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  width: 300px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+}
+
+.modal-content p {
+  margin-bottom: 20px;
+  font-size: 16px;
+}
+
+.confirm-btn,
+.cancel-btn {
+  padding: 10px 20px;
+  margin: 5px;
+  font-size: 14px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.confirm-btn {
+  background-color: #28a745;
+  color: white;
+}
+
+.cancel-btn {
+  background-color: #dc3545;
+  color: white;
+}
+
+
+.status-message p {
+  font-size: 16px;
+  text-align: center;
+}
+
+
+.view-cart {
+  display: inline-flex;
+  align-items: center;
+  background-color: #e8a941;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  margin-bottom: 20px;
+}
+
+.view-cart:hover {
+  transform: scale(1.05);
+  background-color: #d6933a;
+}
+
+/* Cart Icon Styling */
+.cart-icon {
+  margin-right: 10px;
+  font-size: 14px;
+}
+
+.cart-item-count {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  background-color: #262626;
+  color: white;
+  font-size: 10px;
+  font-weight: bold;
+  padding: 5px;
+  border-radius: 50%;
+  min-width: 20px;
+  min-height: 20px;
+  display: flex;
+  z-index: 10;
+  justify-content: center;
+  align-items: center;
+}

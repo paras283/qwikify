@@ -1,0 +1,180 @@
+/* Prevent Text Selection on the Entire Page */
+body {
+  user-select: none; /* Disables text selection globally */
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* Older Microsoft browsers */
+}
+
+.navbar, .nav-menu, .dropdown-menu, .nav-icon {
+  user-select: none; /* Disables text selection on these elements */
+}
+
+/* Allow Text Selection on Specific Elements */
+.nav-links, .dropdown-link {
+  user-select: text; /* Re-enable text selection for nav links and dropdown links */
+}
+
+/* Prevent Text Selection on the Service Button */
+.dropdown-toggle {
+  user-select: none; /* Disable selection for the dropdown (service) button */
+}
+
+/* Navbar Styling */
+.navbar {
+  background-color: white; /* Navbar background color */
+  padding: 8px 10px 8px 5px; /* Navbar padding */
+  color: white;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3); /* Floating shadow effect */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000; /* Ensures the navbar is always on top */
+  height: 60px; /* Fixed height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1100px; /* Maximum width for navbar content */
+  width: 90%; /* Adjusts width for centered alignment */
+  margin: 10px auto;
+}
+
+.nav-logo {
+  color: #E8A941; /* Logo color */
+  font-size: 20px; /* Logo font size */
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Logo Styling */
+.logo-image {
+  width: 180px; /* Adjust logo width */
+  height: auto;
+  display: block; /* Ensures image is a block element */
+}
+
+.nav-logo h2 {
+  margin: 0; /* Remove default margin for fallback text */
+  font-size: 20px;
+  color: black;
+  text-transform: uppercase; /* Optional: Make the text uppercase */
+  font-weight: bold;
+}
+
+/* Menu Links */
+.nav-menu {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-item {
+  margin: 0 15px; /* Space between menu items */
+}
+
+.nav-links {
+  color: white;
+  text-decoration: none;
+  padding: 6px 12px; /* Space for clickable area */
+  font-size: 16px; /* Font size */
+  transition: all 0.3s ease;
+}
+
+.nav-links:hover {
+  color: #28a745; /* Green hover color */
+  background-color: rgba(255, 255, 255, 0.1); /* Hover background effect */
+  border-radius: 8px;
+}
+
+/* Dropdown Styling */
+.dropdown {
+  position: relative;
+}
+
+/* Dropdown Button Styling */
+.dropdown-toggle {
+  cursor: pointer;
+  color: white;
+  padding: 6px 12px;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  user-select: none; /* Disable text selection for the service button */
+  outline: none; /* Remove the focus outline */
+  -webkit-tap-highlight-color: transparent; /* Disable focus highlight on touch devices */
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 25px; /* Dropdown aligns below the navbar */
+  left: 0;
+  background-color: #262626;
+  border-radius: 5px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+  padding: 10px 0;
+  z-index: 10;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.dropdown-link {
+  color: white;
+  text-decoration: none;
+  padding: 8px 16px;
+  display: block;
+  transition: all 0.3s ease;
+  user-select: text; /* Allow text selection for dropdown links */
+}
+
+.dropdown-link:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #28a745;
+}
+
+/* Hamburger Icon */
+.nav-icon {
+  display: none;
+  font-size: 24px;
+  color: black;
+  cursor: pointer;
+}
+
+/* Responsive Media Query */
+@media screen and (max-width: 768px) {
+  .nav-menu {
+    display: none;
+    flex-direction: column;
+    background-color: #262626;
+    position: absolute;
+    top: 60px; /* Aligns below navbar */
+    left: 0;
+    width: 100%;
+    padding: 20px;
+    font-size: 20px;
+    text-align: left;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+    border-bottom-left-radius: 18px;
+    border-bottom-right-radius: 18px;
+  }
+
+  .nav-menu.active {
+    display: flex;
+  }
+
+  .nav-item {
+    margin: 6px 0;
+  }
+
+  .nav-icon {
+    display: block;
+  }
+}

@@ -1,0 +1,112 @@
+/* General Styling */
+.techcare-container {
+    margin: 70px auto; /* Top margin for clear visibility */
+    max-width: 1200px; /* Limit container width */
+    padding: 20px; /* Add padding for breathing space */
+    text-align: center; /* Center-align all content */
+    background-color: #f5f7fa; /* Subtle background color */
+    border-radius: 10px; /* Rounded edges for container */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
+  }
+  
+  /* Heading and Subheading */
+  .techcare-heading {
+    font-size: 2.8rem; /* Larger font for emphasis */
+    color: #2a2a2a; /* Darker text color */
+    margin-bottom: 10px;
+    font-weight: 700; /* Make the text bold */
+    letter-spacing: 2px; /* Add spacing between letters */
+  }
+  
+  .techcare-subheading {
+    font-size: 1.4rem; /* Slightly larger subheading */
+    color: #555; /* Neutral color for subtext */
+    margin-bottom: 30px;
+    font-style: italic; /* Add an elegant italic style */
+  }
+  
+  /* Grid Layout */
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px; /* Increase space between cards */
+    padding: 0 100px;
+    justify-content: center;
+  }
+  
+  /* Service Card */
+  .service-card {
+    background-color: #fff; /* Clean white background */
+    border: 1px solid #e0e0e0; /* Soft border for separation */
+    border-radius: 12px; /* Rounded corners for modern look */
+    padding: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Subtle elevation */
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden; /* Ensure no content overflows */
+  }
+  
+  .service-card:hover {
+    transform: translateY(-7px); /* Lift effect on hover */
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2); /* Highlight card on hover */
+  }
+  
+  /* Icon Styling */
+  .service-icon {
+    font-size: 3.5rem; /* Slightly larger icon size */
+    margin-bottom: 12px;
+    color: #28a745; /* Consistent green theme */
+  }
+  
+  /* Service Name */
+  .service-name {
+    font-size: 1.8rem; /* Larger font size */
+    color: #333; /* Neutral but strong color */
+    margin: 12px 0 8px;
+    font-weight: 600;
+  }
+  
+  /* Service Description */
+  .service-description {
+    font-size: 1rem;
+    color: #666; /* Muted color for description */
+    line-height: 1.5; /* Better readability */
+    margin-bottom: 20px;
+  }
+  
+  /* Button Styling */
+  .service-button {
+    background: linear-gradient(90deg, #28a745, #32cd32); /* Gradient background */
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .service-button:hover {
+    background: linear-gradient(90deg, #218838, #28a745); /* Darker hover gradient */
+    transform: scale(1.05); /* Slight zoom on hover */
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .techcare-heading {
+      font-size: 2.2rem; /* Reduce heading size for smaller screens */
+    }
+  
+    .techcare-subheading {
+      font-size: 1.2rem; /* Adjust subheading size */
+    }
+  
+    .service-card {
+      padding: 15px;
+    }
+  
+    .service-button {
+      font-size: 0.9rem; /* Slightly smaller button text */
+    }
+  }
+  

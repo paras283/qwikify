@@ -1,0 +1,146 @@
+/* Main Container with Dark Theme Gradient */
+.realtor-profile-container {
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364); /* Dark gradient */
+    padding: 20px;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .realtor-profile-container::before {
+    content: '';
+    position: absolute;
+    width: 300%;
+    height: 300%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 10%, transparent 70%);
+    animation: background-move 20s infinite linear;
+    z-index: -1;
+  }
+  
+  /* Profile Card with Glassmorphism */
+  .realtor-profile {
+    background: rgba(15, 30, 45, 0.7); /* Darker glass effect */
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    display: flex;
+    max-width: 900px;
+    width: 100%;
+    overflow: hidden;
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .realtor-profile:hover {
+    transform: scale(1);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.7);
+  }
+  
+  /* Profile Picture Section */
+  .profile-pic img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    max-height: 300px;
+    border-radius: 20px 0 0 20px;
+    filter: grayscale(20%);
+    transition: filter 0.3s ease;
+  }
+  
+  .realtor-profile:hover .profile-pic img {
+    filter: grayscale(0%);
+  }
+  
+  /* Profile Information */
+  .profile-info {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 1;
+    color: #d1d5db; /* Light text color for dark theme */
+  }
+  
+  .profile-info h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    background: linear-gradient(90deg, #ff6a00, #ff0000); /* Vibrant gradient text */
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 10px;
+  }
+  
+  .description {
+    font-size: 1.2rem;
+    color: rgba(209, 213, 219, 0.9); /* Softer light gray */
+    line-height: 1.6;
+    margin-bottom: 20px;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  }
+  
+  .contact-info p {
+    font-size: 1rem;
+    margin: 5px 0;
+  }
+  
+  .contact-info strong {
+    color: #ffa726; /* Vibrant orange for emphasis */
+    font-weight: 600;
+  }
+  
+  /* Social Links */
+  .social-links {
+    margin-top: 20px;
+  }
+  
+  .social-links h3 {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+  }
+  
+  .social-links a {
+    text-decoration: none;
+    display: inline-block;
+    margin-right: 15px;
+    font-size: 1rem;
+    padding: 10px 15px;
+    color: #d1d5db; /* Light color for dark theme */
+    border-radius: 25px;
+    background: linear-gradient(90deg, #ff6a00, #e52e71); /* Vibrant gradient for buttons */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .social-links a:hover {
+    transform: scale(1.1);
+    box-shadow: 0 5px 15px rgba(255, 102, 0, 0.6);
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .realtor-profile {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .profile-pic img {
+      max-height: 200px;
+      width: 100%;
+      border-radius: 20px 20px 0 0;
+    }
+  
+    .profile-info {
+      padding: 20px;
+    }
+  
+    .profile-info h1 {
+      font-size: 2rem;
+    }
+  
+    .description {
+      font-size: 1rem;
+    }
+  }
+  
